@@ -1,6 +1,6 @@
-# Muutus Challenge
+# HQ Store
 
-The Coding Challenge given to me was to create a basic e-commerce website with the Marvel API. In this challenge I implemented the products page, and a fully functional cart page.
+An HQ Store using Marvel's API, React.js and Redux.
 
 <p align="center">
   <img src="./demo.gif">
@@ -18,3 +18,4 @@ Clone the repository, run `yarn && yarn start` on the react folder, and it will 
 - React Hooks
 - Redux
 - Redux Hooks
+- Marvel API
