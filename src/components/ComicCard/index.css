@@ -59,13 +59,14 @@
   align-self: flex-end;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   background-color: #ed1d24;
   padding: 4px;
   border-radius: 50px;
   font-size: 0.8rem;
+  line-height: 0.8rem;
   font-weight: bold;
   color: #f1f1f1;
-  margin: -1.25rem;
+  margin: -1rem 1.25rem;
 }
