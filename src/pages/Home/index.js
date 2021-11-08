@@ -9,11 +9,13 @@ import ComicCard from "../../components/ComicCard";
 function Home() {
   // State
   const [comics, setComics] = useState([]);
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
+  const [isFetching, setIsFetching] = useState(false);
 
   // Responsible for fetching the first comic list when the page loads.
   useEffect(() => {
     const fetchData = async () => {
+      setIsFetching(true);
       // The ts and hash constants are necessary to validate the marvel API using a MD5 Encryption Library
       const ts = Date.now();
       const hash = md5(
@@ -29,9 +31,14 @@ function Home() {
       );
       const parsedResponse = await response.json();
       setComics(parsedResponse.data.results);
+      setIsFetching(false);
     };
     fetchData();
-  }, []);
+  }, [page]);
+
+  const fetchMoreComics = () => {
+    setPage(page + 1);
+  };
 
   return (
     <div className="homeContainer">
@@ -47,6 +54,11 @@ function Home() {
             return <ComicCard key={index} product={comic} />;
           }
         })}
+        {!isFetching && (
+          <button className="fetchComicsBtn" onClick={fetchMoreComics}>
+            Load more
+          </button>
+        )}
       </div>
     </div>
   );
