@@ -1,6 +1,6 @@
 # HQ Store
 
-An HQ Store using Marvel's API, React.js and Redux.
+A Marvel inspired HQ Store using Marvel's API, React.js and Redux.
 
 <p align="center">
   <img src="./demo.gif">
