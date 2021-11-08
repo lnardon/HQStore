@@ -28,7 +28,7 @@ function Home() {
       const response = await fetch(
         `https://gateway.marvel.com:443/v1/public/characters/1011109/comics?limit=${
           page * 25
-        }&ts=${ts}&apikey=2883bc674f6f35a295e59e6ea3387d6d&hash=${hash}`
+        }&ts=${ts}&apikey=${process.env.REACT_APP_API_KEY}&hash=${hash}`
       );
       const parsedResponse = await response.json();
       setComics(parsedResponse.data.results);
