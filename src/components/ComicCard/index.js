@@ -26,22 +26,28 @@ function ComicCard({ product }) {
 
       <div className="comicInfo">
         <h2 className="comicTitle">{product.title}</h2>
-        {product.prices.map((info, index) => {
-          return (
-            <ComicPriceStripe type={info.type} price={info.price} key={index} />
-          );
-        })}
-        <button
-          className="ctaBtn"
-          onClick={() => {
-            dispatch({
-              type: ADD_TO_CART,
-              product,
-            });
-          }}
-        >
-          Add to Cart
-        </button>
+        <div className="comicBuySection">
+          {product.prices.map((info, index) => {
+            return (
+              <ComicPriceStripe
+                type={info.type}
+                price={info.price}
+                key={index}
+              />
+            );
+          })}
+          <button
+            className="ctaBtn"
+            onClick={() => {
+              dispatch({
+                type: ADD_TO_CART,
+                product,
+              });
+            }}
+          >
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   );
