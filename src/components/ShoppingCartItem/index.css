@@ -26,7 +26,7 @@
   flex: 2;
   height: 100%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   margin-left: 1rem;
 }
 
@@ -34,6 +34,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .itemAmountContainer {
@@ -45,27 +46,28 @@
 
 .comicCartTitle {
   width: 90%;
-  font-size: 1.25rem;
-  font-weight: normal;
+  font-size: 2rem;
+  font-weight: bold;
   color: #f1f1f1;
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
   padding: 0px;
 }
 
 .comicPrice {
   width: 90%;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: normal;
   color: #f1f1f1;
   text-align: left;
 }
 
 .amountButtons {
   display: flex;
-  width: 100px;
+  width: 125px;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .amountBtn {
@@ -92,7 +94,9 @@
   color: #171717;
   font-weight: bold;
   font-size: 1.125rem;
+  line-height: 1.125rem;
   border-radius: 0.125rem;
+  margin: 0rem 0.25rem;
 }
 
 .itemDeleteContainer {
@@ -103,18 +107,29 @@
 }
 
 .removeBtn {
-  background-color: transparent;
+  background-color: rgba(2, 86, 166);
   border: none;
   outline: none;
   color: #f1f1f1;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  font-size: 0.8rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .contentContainer {
+    margin-left: 0rem;
+  }
+
   .shoppingCartItemContainer {
     flex-direction: column;
     height: auto;
+  }
+
+  .comicCartTitle {
+    margin-bottom: 1rem;
   }
 
   .productCover {
@@ -127,17 +142,13 @@
     margin-bottom: 1rem;
   }
 
-  .amountButtons {
-    display: flex;
-    width: 100px;
+  .itemAmountContainer {
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+    justify-content: center;
   }
 
   .amountBtn {
-    width: 25px;
-    height: 25px;
     background-color: #ed1d24;
     border: none;
     color: #f1f1f1;
@@ -152,16 +163,11 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 1rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
   }
 
   .removeBtn {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: #f1f1f1;
-    text-decoration: underline;
-    cursor: pointer;
+    width: 100%;
   }
 }

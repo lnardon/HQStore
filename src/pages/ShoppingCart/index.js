@@ -22,11 +22,11 @@ function ShoppingCart() {
   return (
     <div className="shoppingCartContainer">
       <Header />
-      <Link to={"/"} className="backBtn">
-        {`< Go Back`}
-      </Link>
       <div className="shoppingCartItemsListContainer">
         <div className="shoppingCartContentContainer">
+          <Link to={"/"} className="backBtn">
+            {`View All Comics`}
+          </Link>
           {cart.items.map((item, index) => {
             return <ShoppingCartItem key={index} item={item} />;
           })}
