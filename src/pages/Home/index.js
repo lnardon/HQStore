@@ -5,6 +5,7 @@ import md5 from "md5";
 import "./index.css";
 import Header from "../../components/Header";
 import ComicCard from "../../components/ComicCard";
+import loader from "../../assets/loader.svg";
 
 function Home() {
   // State
@@ -54,10 +55,14 @@ function Home() {
             return <ComicCard key={index} product={comic} />;
           }
         })}
-        {!isFetching && (
+      </div>
+      <div style={{ margin: "3rem 0rem" }}>
+        {!isFetching ? (
           <button className="fetchComicsBtn" onClick={fetchMoreComics}>
             Load more
           </button>
+        ) : (
+          <img src={loader} alt="loader" />
         )}
       </div>
     </div>
